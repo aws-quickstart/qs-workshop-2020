@@ -1,0 +1,119 @@
+As participants work through the workshop, they will deploy two templates: a "workload" template and
+a "master" template. The "workload" template is deployed in steps: description and metadata,
+parameters, rules, mappings, conditions, resources, and outputs. The contents of each of these steps
+can be found in this document, so participants can copy-and-paste the code rather than have to type
+it out manually.
+
+----------------------------------------------------------------------------------------------------
+
+1) Workload tempalte - Description and Metadata
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: This workload template deploys an ASG behind an ELB load balancer in
+  two private subnets. The cluster is configured to use an S3 bucket for storage **WARNING**
+  This template creates EC2 instances and related resources. You will be billed for
+  the AWS resources used if you create a stack from this template.
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+<need to fill out once the templates are complete>
+    ParameterLabels:
+<need to fill out once the templates are complete>
+
+----------------------------------------------------------------------------------------------------
+
+2) Workload template - Parameters
+
+Parameters:
+<need to fill out once the templates are complete>
+
+----------------------------------------------------------------------------------------------------
+
+3) Workload template - Rules
+
+Rules:
+  KeyPairsNotEmpty:
+    Assertions:
+    - Assert:
+        Fn::Not:
+        - Fn::EachMemberEquals:
+          - Fn::RefAll: AWS::EC2::KeyPair::KeyName
+          - ''
+      AssertDescription: All key pair parameters must not be empty
+  SubnetsInVPC:
+    Assertions:
+    - Assert:
+        Fn::EachMemberIn:
+        - Fn::ValueOfAll:
+          - AWS::EC2::Subnet::Id
+          - VpcId
+        - Fn::RefAll: AWS::EC2::VPC::Id
+      AssertDescription: All subnets must in the VPC
+
+----------------------------------------------------------------------------------------------------
+
+4) Workload template - Mappings
+
+Mappings:
+  AWSAMIRegionMap:
+    AMI:
+      AMZNLINUXHVM: amzn-ami-hvm-2018.03.0.20190611-x86_64-gp2
+    ap-northeast-1:
+      AMZNLINUXHVM: ami-02ddf94e5edc8e904
+    ap-northeast-2:
+      AMZNLINUXHVM: ami-0ecd78c22823e02ef
+    ap-south-1:
+      AMZNLINUXHVM: ami-05695932c5299858a
+    ap-southeast-1:
+      AMZNLINUXHVM: ami-043afc2b8b6cfba5c
+    ap-southeast-2:
+      AMZNLINUXHVM: ami-01393ce9a3ca55d67
+    ca-central-1:
+      AMZNLINUXHVM: ami-0fa94ecf2fef3420b
+    eu-central-1:
+      AMZNLINUXHVM: ami-0ba441bdd9e494102
+    eu-west-1:
+      AMZNLINUXHVM: ami-0e61341fa75fcaa18
+    eu-west-2:
+      AMZNLINUXHVM: ami-050b8344d77081f4b
+    sa-east-1:
+      AMZNLINUXHVM: ami-05b7dbc290217250d
+    us-east-1:
+      AMZNLINUXHVM: ami-0e2ff28bfb72a4e45
+    us-east-2:
+      AMZNLINUXHVM: ami-0998bf58313ab53da
+    us-west-1:
+      AMZNLINUXHVM: ami-021bb9f371690f97a
+    us-west-2:
+      AMZNLINUXHVM: ami-079f731edfe27c29c
+
+----------------------------------------------------------------------------------------------------
+
+5) Workload template - Conditions
+
+Conditions:
+  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-quickstart']
+
+----------------------------------------------------------------------------------------------------
+
+6) Workload template - Resources
+
+<need to fill out once the templates are complete>
+
+----------------------------------------------------------------------------------------------------
+
+7) Workload template - Outputs
+
+Outputs:
+  ELBDNSName:
+    Description: ELB DNS Name
+    Value:
+      Fn::GetAtt:
+      - ElasticLoadBalancer
+      - DNSName
+
+----------------------------------------------------------------------------------------------------
+
+8) Master template
+
+<need to fill out once the templates are complete>
