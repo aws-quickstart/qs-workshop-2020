@@ -958,7 +958,7 @@ tests:
       QSS3BucketRegion: $[taskcat_current_region]
       EnvironmentAccessType: Bastion
       KeyPairName: $[taskcat_getkeypair]
-      OperatorEmail: quickstart-eng@amazon.com
+      OperatorEmail: test@test.com
       RemoteAccessCIDR: 10.0.4.0/16
       S3BucketName: $[taskcat_random-string]
     regions:
@@ -974,7 +974,7 @@ tests:
       QSS3BucketRegion: $[taskcat_current_region]
       EnvironmentAccessType: RDGW
       KeyPairName: $[taskcat_getkeypair]
-      OperatorEmail: quickstart-eng@amazon.com
+      OperatorEmail: test@test.com
       RemoteAccessCIDR: 10.0.4.0/16
       S3BucketName: $[taskcat_random-string]
     regions:
