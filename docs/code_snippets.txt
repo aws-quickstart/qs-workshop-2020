@@ -4,6 +4,15 @@ parameters, rules, mappings, conditions, resources, and outputs. The contents of
 can be found in this document, so participants can copy-and-paste the code rather than have to type
 it out manually.
 
+If a participant would like to bypass the copy-and-paste process and simply download the full
+contents of the templates to their repository, they can simply execute the following commands from
+the root of their repository:
+
+mkdir templates
+curl -o ./templates/workshop.template.yaml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/master/docs/content/workshop.template.yaml
+curl -o ./templates/workshop-master.template.yaml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/master/docs/content/workshop-master.template.yaml
+curl -o ./.taskcat.yml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/master/docs/content/.taskcat.yml
+
 ----------------------------------------------------------------------------------------------------
 
 1) Workload tempalte - Description and Metadata
