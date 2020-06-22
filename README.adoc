@@ -1,5 +1,28 @@
-*QS Workshop 2020*
+= *QS Workshop 2020*
 
 This repository is to be used for the interactive Quick Start workshop. You need to run the script named repo-setup.sh after you clone this repo to your local machine.
 The script creates an new repository, that attendees will fork into there own IDEs. They will then uses this repo for the workshop. This repo will need to be need to be deleted
 one day after the workshop by the QS PSA presenting the workshop.
+
+*To setup Workshop*:
+
+. Goto the "aws-quickstart" Github repo and create new repo.
+.. Create repo with following name structure: workshop-<date>
+... ex. workshop-6-22-2020
+. Clone this repo to your local machine
+.. git clone https://github.com/aws-quickstart/qs-workshop-2020.git
+. Goto new local repo
+.. cd <path-to-repo>/qs-workshop-2020
+. Update README.adoc located in "qs-workshop-2020/docs/content"
+.. Make sure to change the highlighted entries
+... They are:
+.... #<Insert WKSHP Date># in title
+.... #<Insert WKSHP Date># in body
+.... #<Insert PSA Name># in body
+. Run "workshop-setup.sh" from root of project. This will create the actual workshop repo locally and commit it to the remote repo.
+
+*After Workshop*:
+
+. Make sure to remove the repo you created in step 1.a. Do this 1 day after workshop completion.
+. Notify Chris Perkins of workshop completion for monthly 2x2.
+
