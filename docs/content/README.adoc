@@ -1,0 +1,6 @@
+This repository is being used for a Quick Start Workshop on #<insert Date># which is being lead by #<Insert PSA Name>#.
+
+This Quick Start Workshop, goes over the basics of what a Quick Start is and how to build a Quick Start. The workshop also touchs on how to test using TaskCat.
+
+This Repo will be removed 2 days after the work shop. For further, experimentation use the work shop at the following link:
+https://workshop.quickstart.awspartner.com/[Quick Start Work Shop]

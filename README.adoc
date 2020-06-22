@@ -1,0 +1,5 @@
+*QS Workshop 2020*
+
+This repository is to be used for the interactive Quick Start workshop. You need to run the script named repo-setup.sh after you clone this repo to your local machine.
+The script creates an new repository, that attendees will fork into there own IDEs. They will then uses this repo for the workshop. This repo will need to be need to be deleted
+one day after the workshop by the QS PSA presenting the workshop.
