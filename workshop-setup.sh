@@ -2,6 +2,9 @@
 
 CURRENTDIR=${pwd}
 
+echo $CURRENTDIR
+
+
 # step 1: name of the remote repo. Enter a SINGLE WORD ..or...separate with hyphens
 echo "Name Repo for Workshop (I.E> Workshop-<Date>)?"
 read REPO_NAME
@@ -11,7 +14,7 @@ read REPO_NAME
 echo "What is the absolute path to your local project directory?"
 read PROJECT_PATH
 
-mkdir -p $PROJECT_PATH/$REPO_NAME
+mkdir -p '$PROJECT_PATH/$REPO_NAME'
 
 #echo "What is your github username?"
 #read USERNAME
