@@ -15,7 +15,7 @@ curl -o ./.taskcat.yml https://raw.githubusercontent.com/aws-quickstart/qs-works
 
 ----------------------------------------------------------------------------------------------------
 
-1) Workload tempalte - Description and Metadata
+1) Workload template - Description and Metadata
 
 AWSTemplateFormatVersion: '2010-09-09'
 Description: This workload template deploys an ASG behind an ELB load balancer in
