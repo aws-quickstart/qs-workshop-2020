@@ -515,7 +515,7 @@ Conditions:
         Count:
           Ref: WorkloadNodesDesiredCapacity
         Timeout: PT2H
-  S3BucketName:
+  S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref 'S3BucketName'
