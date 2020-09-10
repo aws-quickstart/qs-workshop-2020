@@ -1,5 +1,28 @@
+At the beginning of the workshop participants are asked to enter several commands to clone their
+forked GitHub repository and add submodules. These commands can be copied-and-pasted from here:
+
+Cloning the repository:
+
+git clone https://github.com/<GitHubID>/qs-workshop-2020.git
+cd ./qs-workshop-2020
+
+Creating the "develop" branch:
+
+git checkout -b develop
+git push --set-upstream origin develop
+
+Adding submodules:
+
+mkdir submodules
+cd ./submodules
+git submodule add https://github.com/aws-quickstart/quickstart-aws-vpc.git ./quickstart-aws-vpc
+git submodule add https://github.com/aws-quickstart/quickstart-linux-bastion.git ./quickstart-linux-bastion
+git submodule add https://github.com/aws-quickstart/quickstart-microsoft-rdgateway.git ./quickstart-microsoft-rdgateway
+git submodule update --init --recursive
+cd ..
+
 As participants work through the workshop, they will deploy two templates: a "workload" template and
-a "master" template. The "workload" template is deployed in steps: description and metadata,
+a "main" template. The "workload" template is deployed in steps: description and metadata,
 parameters, rules, mappings, conditions, resources, and outputs. The contents of each of these steps
 can be found in this document, so participants can copy-and-paste the code rather than have to type
 it out manually.
