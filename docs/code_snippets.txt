@@ -9,9 +9,9 @@ contents of the templates to their repository, they can simply execute the follo
 the root of their repository:
 
 mkdir templates
-curl -o ./templates/workshop.template.yaml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/master/docs/content/workshop.template.yaml
-curl -o ./templates/workshop-master.template.yaml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/master/docs/content/workshop-master.template.yaml
-curl -o ./.taskcat.yml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/master/docs/content/.taskcat.yml
+curl -o ./templates/workshop.template.yaml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/main/docs/content/workshop.template.yaml
+curl -o ./templates/workshop-main.template.yaml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/main/docs/content/workshop-main.template.yaml
+curl -o ./.taskcat.yml https://raw.githubusercontent.com/aws-quickstart/qs-workshop-2020/main/docs/content/.taskcat.yml
 
 ----------------------------------------------------------------------------------------------------
 
