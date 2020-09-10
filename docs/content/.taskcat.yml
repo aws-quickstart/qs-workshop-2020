@@ -24,7 +24,7 @@ tests:
     - us-east-1
     #- us-west-1
     s3_bucket: ''
-    template: templates/workshop-master.template.yaml
+    template: templates/workshop-main.template.yaml
   RDGW:
     parameters:
       AvailabilityZones: $[taskcat_genaz_2]
@@ -40,4 +40,4 @@ tests:
     #- us-east-2
     - us-west-2
     s3_bucket: ''
-    template: templates/workshop-master.template.yaml
+    template: templates/workshop-main.template.yaml
