@@ -291,6 +291,7 @@ Conditions:
 
 6) Workload template - Resources
 
+
   NotificationTopic:
     Type: AWS::SNS::Topic
     Properties:

@@ -1,0 +1,43 @@
+project:
+  name: quickstart-workshop
+  owner: quickstart-eng@amazon.com
+  package_lambda: false
+  regions:
+  - us-east-1
+  - us-east-2
+  - us-west-1
+  - us-west-2
+  s3_bucket: ''
+tests:
+  bastion:
+    parameters:
+      AvailabilityZones: $[taskcat_genaz_2]
+      AdminPassword: $[taskcat_genpass_12]
+      QSS3BucketName: $[taskcat_autobucket]
+      QSS3BucketRegion: $[taskcat_current_region]
+      EnvironmentAccessType: Bastion
+      KeyPairName: $[taskcat_getkeypair]
+      OperatorEmail: test@test.com
+      RemoteAccessCIDR: 10.0.4.0/16
+      S3BucketName: $[taskcat_random-string]
+    regions:
+    - us-east-1
+    #- us-west-1
+    s3_bucket: ''
+    template: templates/workshop-main.template.yaml
+  RDGW:
+    parameters:
+      AvailabilityZones: $[taskcat_genaz_2]
+      AdminPassword: $[taskcat_genpass_12]
+      QSS3BucketName: $[taskcat_autobucket]
+      QSS3BucketRegion: $[taskcat_current_region]
+      EnvironmentAccessType: RDGW
+      KeyPairName: $[taskcat_getkeypair]
+      OperatorEmail: test@test.com
+      RemoteAccessCIDR: 10.0.4.0/16
+      S3BucketName: $[taskcat_random-string]
+    regions:
+    #- us-east-2
+    - us-west-2
+    s3_bucket: ''
+    template: templates/workshop-main.template.yaml
